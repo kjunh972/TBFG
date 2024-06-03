@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 상단 액션바와 뒤로가기 버튼을 포함하는 레이아웃 -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/lime">
+
+        <!-- 뒤로가기 버튼: 액션바 왼쪽에 위치 -->
+        <Button
+            android:id="@+id/backbtn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/lime"
+            android:drawableLeft="@drawable/backic"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical" />
+
+        <!-- 액션바 타이틀: 중앙에 위치 -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="원하는 자리 선택"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 스크롤 가능한 컨텐츠 영역: 액션바 아래에 위치하며, 여러 버튼과 텍스트뷰를 포함 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="3dp">
+
+        <!-- 전체 컨텐츠를 담는 LinearLayout, 수직 방향으로 배치 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="22dp">
+
+            <!-- 강의실 번호 버튼: 강의실 번호를 표시하며, 하늘색 배경과 텍스트로 구성 -->
+            <Button
+                android:id="@+id/classbtn"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/sky_blue"
+                android:text="1101" />
+
+            <!-- 예약시간 텍스트 뷰: 상단에 위치하며, 텍스트 크기는 20sp로 설정 -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="8dp"
+                android:text="자리 선택"
+                android:textSize="20sp" />
+
+            <!-- 자리 선택 버튼들: 6개의 행, 각 행에 4개의 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <!-- 첫 번째 행 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/seat1Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 1"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat2Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 2"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat3Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 3"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat4Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 4"
+                        android:backgroundTint="@color/gray"/>
+
+                </LinearLayout>
+
+                <!-- 두 번째 행 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/seat5Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 5"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat6Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 6"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat7Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 7"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat8Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 8"
+                        android:backgroundTint="@color/gray"/>
+
+                </LinearLayout>
+
+                <!-- 세 번째 행 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/seat9Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 9"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat10Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 10"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat11Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 11"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat12Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 12"
+                        android:backgroundTint="@color/gray"/>
+
+                </LinearLayout>
+                <!-- 네 번째 행 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/seat13Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 13"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat14Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 14"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat15Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 15"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat16Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 16"
+                        android:backgroundTint="@color/gray"/>
+
+                </LinearLayout>
+
+                <!-- 다섯 번째 행 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/seat17Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 17"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat18Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 18"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat19Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 19"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat20Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 20"
+                        android:backgroundTint="@color/gray"/>
+
+                </LinearLayout>
+
+                <!-- 여섯 번째 행 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/seat21Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 21"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat22Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 22"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat23Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 23"
+                        android:backgroundTint="@color/gray"/>
+
+                    <Button
+                        android:id="@+id/seat24Button"
+                        style="@style/SeatButtonStyle"
+                        android:text="자리 24"
+                        android:backgroundTint="@color/gray"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>
+

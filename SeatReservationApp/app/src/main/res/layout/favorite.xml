@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 상단 액션바 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/lime"
+        app:title="메인페이지" />
+
+    <!-- 텍스트뷰 1 -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:text="즐겨찾기"
+        android:layout_below="@id/toolbar"
+        android:textSize="30sp" />
+
+    <!-- 텍스트뷰 2 -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:text="즐겨찾기를 추가해주세요"
+        android:layout_below="@id/textView"
+        android:textSize="20sp" />
+
+    <!-- 추가된 부분: 즐겨찾기 버튼 -->
+    <Button
+        android:id="@+id/bookmarkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:text="+"
+        android:textSize="40sp"
+        android:backgroundTint="@color/sky_blue"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

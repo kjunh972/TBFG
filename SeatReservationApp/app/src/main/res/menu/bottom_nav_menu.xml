@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+android:id="@+id/navigation_home"
+android:icon="@drawable/bookmarkic"
+
+android:title="홈" />
+<item
+android:id="@+id/navigation_dashboard"
+android:icon="@drawable/timeic"
+android:title="예약확인" />
+<item
+android:id="@+id/navigation_notifications"
+android:icon="@drawable/bellic"
+android:title="알림" />
+<item
+android:id="@+id/navigation_settings"
+android:icon="@drawable/bookic"
+android:title="시간표" />
+    </menu>

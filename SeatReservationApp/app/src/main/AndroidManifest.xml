@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CLEARTEXT_TRAFFIC" />
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SeatReservationApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Campus" android:label="캠퍼스 액티비티"/>
+        <activity android:name=".Classroom1" android:label="교실 액티비티"/>
+        <activity android:name=".Classroom2" android:label="교실 액티비티"/>
+        <activity android:name=".Classroom3" android:label="교실 액티비티"/>
+        <activity android:name=".Classroom4" android:label="교실 액티비티"/>
+        <activity android:name=".Classroom5" android:label="교실 액티비티"/>
+        <activity android:name=".Classroom6" android:label="교실 액티비티"/>
+        <activity android:name=".Classroom7" android:label="교실 액티비티"/>
+        <activity android:name=".Classroom8" android:label="교실 액티비티"/>
+        <activity android:name=".timetable" android:label="타임테이블 액티비티"/>
+        <activity android:name=".Reservation" android:label="좌석예약 액티비티"/>
+    </application>
+
+</manifest>
